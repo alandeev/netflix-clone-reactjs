@@ -1,5 +1,7 @@
 import { IMovie } from '../interfaces/movie';
 
+import './Movie.css'
+
 interface MovieDTO {
     movie: IMovie,
     className: string

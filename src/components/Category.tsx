@@ -2,6 +2,8 @@ import Raect from 'react'; //eslint-disable-line
 import { categoryResponse } from '../services/tmdbService';
 import { Movie } from './Movie';
 
+import './Category.css'
+
 interface categoryDTO {
     category: categoryResponse;
 }

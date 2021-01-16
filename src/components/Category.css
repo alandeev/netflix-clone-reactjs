@@ -1,0 +1,22 @@
+/* 
+category
+category--list
+category--items
+category--item
+*/
+
+.category--list {
+  overflow-x: hidden;
+}
+
+.category--items {
+  display: flex;
+}
+
+.category--item img {
+  transform: scale(0.9);
+}
+
+.category--item img:hover {
+  transform: scale(1);
+}
