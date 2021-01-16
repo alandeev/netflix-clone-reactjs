@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Category } from './components/Category';
-import Landing from './pages/landing';
 
 import tmdbService, { categoryResponse } from './services/tmdbService';
 
@@ -17,7 +16,7 @@ function App() {
 
   return (
     <div>
-      {moveis.map(category => <Category movie={category} /> )}
+      {moveis.map((category, key) => <Category key={key} category={category} /> )}
     </div>
   );
 }
