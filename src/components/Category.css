@@ -16,7 +16,7 @@
   display: inline-block;
   transform: scale(0.9);
   transition: all ease-in-out 200ms;
-  width: 250px;
+  width: 160px;
 }
 
 .category--item img {

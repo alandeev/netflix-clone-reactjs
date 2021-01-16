@@ -61,7 +61,14 @@ export default {
             }
         ]
     },
-    getMovieById: async (movieId: number): Promise<IMovieExtense> => {
-        return (await fetchBasic<IMovieExtense>(`/movie/${movieId}?&language=pt-BR&api_key=${TOKEN}`)).data;
+    getMovieById: async (movieId: number, type: string = 'tv'): Promise<IMovieExtense> => {
+        switch (type){
+            case 'tv':
+                return (await fetchBasic<IMovieExtense>(`/tv/${movieId}?&language=pt-BR&api_key=${TOKEN}`)).data;
+            case 'movie':
+                return (await fetchBasic<IMovieExtense>(`/movie/${movieId}?&language=pt-BR&api_key=${TOKEN}`)).data;
+            default:
+                return (await fetchBasic<IMovieExtense>(`/movie/${movieId}?&language=pt-BR&api_key=${TOKEN}`)).data;;
+        }
     }
 }

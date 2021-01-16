@@ -15,8 +15,8 @@ function App() {
     (async () => {
       const items = await tmdbService.getPageInfo();
       
-      let randomId = items[1].items[Math.floor(Math.random() * items[1].items.length)].id
-      
+      let randomId = items[0].items[Math.floor(Math.random() * items[1].items.length)].id
+       
       let MainItem = await tmdbService.getMovieById(randomId);
       if(!MainItem){
         randomId = items[1].items[Math.floor(Math.random() * items[1].items.length)].id

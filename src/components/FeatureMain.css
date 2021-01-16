@@ -39,6 +39,8 @@
 }
 
 .movie-description {
+  max-height: 100px;
+  overflow-y: hidden;
   opacity: 0.5;
 }
 
@@ -47,17 +49,43 @@
 }
 
 .movie-controls button {
-  background: black;
-  color: white;
   border: none;
   outline: none;
-  padding: 12px 24px;
+  padding: 14px 28px;
   margin-right: 10px;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
 }
 
+.movie-controls .show {
+  background: white;
+  color: black;
+}
+
+.movie-controls .list {
+  background: black;
+  color: white;
+}
+
+.movie-controls .list:hover {
+  background: black;
+  color: white;
+}
+
+.movie-controls .show:hover {
+  background: white;
+  color: black;
+}
+
 .feature-main .movie-title{
   font-size: 3rem;
+}
+
+.movie-gerens {
+  display: flex;
+}
+
+.movie-gerens p {
+  margin-right: 5px;
 }

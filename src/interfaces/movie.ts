@@ -42,4 +42,7 @@ export interface IMovieExtense {
     video: boolean;
     vote_average: number;
     vote_count: number;
+    name: string;
+    seasons: any[];
+    first_air_date: string;
 }

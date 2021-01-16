@@ -19,21 +19,23 @@ export function FeatureMain({ movie }: FeatureMainDTO){
         <Header />
         <div className="horizontal-grandient">
           <div className="movie">
-            <h1 className="movie-title">{ movie.title }</h1>
+            <h1 className="movie-title">{ movie.name }</h1>
             <div className="movie-details">
               <p className="points">{movie.vote_average}</p>
-              <p className="create-date">{movie.release_date}</p>
-              <p className="count-temp">4 temporadas</p>
+              <p className="create-date">{movie.first_air_date.slice(0, 4)}</p>
+              <p className="count-temp">{ movie.seasons.length > 1 ? `${movie.seasons.length+1} temporadas` : "1 temporada"  }</p>
             </div>
             <div className="movie-description">
               <p>{movie.overview}</p>
             </div>
             <div className="movie-controls">
-              <button>Assistir</button>
-              <button>Minha Lista</button>
+              <button className="show">Assistir</button>
+              <button className="list">Minha Lista</button>
             </div>
             <div className="movie-gerens">
-
+                {movie.genres.length > 0 && movie.genres.map((genre, count) => (
+                  <p>{genre.name}{movie.genres.length > count+1 ? ',' : ''}</p>
+                ))}
             </div>
           </div>
         </div>
