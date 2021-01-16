@@ -12,6 +12,11 @@
 
 .header--logo img { width: 110px; }
 
+.header--github {
+    height: 30px;
+    width: 30px;
+}
+
 .header--user img { 
     width: 60px;
     float: right; 
