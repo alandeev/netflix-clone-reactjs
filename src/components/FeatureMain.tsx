@@ -1,11 +1,24 @@
 import React from 'react'; //disable-eslint-line
+import { IMovie } from '../interfaces/movie';
 
 import './FeatureMain.css';
 
-export function FeatureMain({ ...props }){
+interface FeatureMainDTO {
+  movie: IMovie
+}
+
+export function FeatureMain({ movie }: FeatureMainDTO){
   return (
-    <div className="feature-main" {...props}>
-      <h1>Manutenção</h1>
-    </div>
+    <section className="feature-main" style={{ 
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})`
+    }}>
+      <div className="vertical-grandient">
+        <div className="horizontal-grandient">
+          <h1>{ movie.title }</h1>
+        </div>
+      </div>
+    </section>
   )
 }

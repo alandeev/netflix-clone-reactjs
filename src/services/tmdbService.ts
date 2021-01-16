@@ -5,8 +5,8 @@ import { IMovie } from '../interfaces/movie';
 const BASE_API = "https://api.themoviedb.org/3";
 const TOKEN = "63b106b0deba7e01034936daac898b89";
 
-const fetchBasic = async (endpoint: string) => {
-    return axios.get(`${BASE_API}${endpoint}`);
+const fetchBasic = async <T>(endpoint: string) => {
+    return axios.get<T | any>(`${BASE_API}${endpoint}`);
 }
 
 export interface categoryResponse {
@@ -15,6 +15,7 @@ export interface categoryResponse {
     items: IMovie[]    
 }
 
+// eslint-disable-next-line
 export default {
     getPageInfo:  async (): Promise<categoryResponse[]> => {
         return [
@@ -59,5 +60,8 @@ export default {
                 items: (await fetchBasic(`/discover/movie?with_genres=99&language=pt-BR&api_key=${TOKEN}`)).data.results
             }
         ]
+    },
+    getMovieById: async (movieId: number): Promise<IMovie> => {
+        return (await fetchBasic<IMovie>(`/movie/${movieId}?&language=pt-BR&api_key=${TOKEN}`)).data;
     }
 }

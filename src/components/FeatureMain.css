@@ -1,3 +1,18 @@
 .feature-main {
   height: 100vh;
 }
+
+.feature-main .vertical-grandient {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 30%, transparent 70%);
+}
+
+.feature-main .horizontal-grandient {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+.feature-main h1 {
+  color: white;
+}

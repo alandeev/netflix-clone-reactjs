@@ -1,11 +1,10 @@
-/* 
-category
-category--list
-category--items
-category--item
-*/
+.category--title {
+   font-size: 2rem;
+}
 
 .category--list {
+  display: block;
+  margin: 20px 0;
   overflow-x: hidden;
 }
 
@@ -13,10 +12,18 @@ category--item
   display: flex;
 }
 
-.category--item img {
+.category--item {
+  display: inline-block;
   transform: scale(0.9);
+  transition: all ease-in-out 200ms;
+  width: 250px;
 }
 
-.category--item img:hover {
+.category--item img {
+  width: inherit;
+  height: inherit;
+}
+
+.category--item:hover {
   transform: scale(1);
 }
