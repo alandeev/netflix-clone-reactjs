@@ -1,10 +1,10 @@
 import React from 'react'; //disable-eslint-line
-import { IMovie } from '../interfaces/movie';
+import { IMovieExtense } from '../interfaces/movie';
 
 import './FeatureMain.css';
 
 interface FeatureMainDTO {
-  movie: IMovie
+  movie: IMovieExtense
 }
 
 export function FeatureMain({ movie }: FeatureMainDTO){
@@ -16,7 +16,24 @@ export function FeatureMain({ movie }: FeatureMainDTO){
     }}>
       <div className="vertical-grandient">
         <div className="horizontal-grandient">
-          <h1>{ movie.title }</h1>
+          <div className="movie">
+            <h1 className="movie-title">{ movie.title }</h1>
+            <div className="movie-details">
+              <p className="points">8.5</p>
+              <p className="create-date">2016</p>
+              <p className="count-temp">4 temporadas</p>
+            </div>
+            <div className="movie-description">
+              <p>{movie.overview}</p>
+            </div>
+            <div className="movie-controls">
+              <button>Assistir</button>
+              <button>Minha Lista</button>
+            </div>
+            <div className="movie-gerens">
+
+            </div>
+          </div>
         </div>
       </div>
     </section>

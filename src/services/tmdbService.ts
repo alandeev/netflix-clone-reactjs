@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { IMovie } from '../interfaces/movie';
+import { IMovie, IMovieExtense } from '../interfaces/movie';
 
 const BASE_API = "https://api.themoviedb.org/3";
 const TOKEN = "63b106b0deba7e01034936daac898b89";
@@ -61,7 +61,7 @@ export default {
             }
         ]
     },
-    getMovieById: async (movieId: number): Promise<IMovie> => {
-        return (await fetchBasic<IMovie>(`/movie/${movieId}?&language=pt-BR&api_key=${TOKEN}`)).data;
+    getMovieById: async (movieId: number): Promise<IMovieExtense> => {
+        return (await fetchBasic<IMovieExtense>(`/movie/${movieId}?&language=pt-BR&api_key=${TOKEN}`)).data;
     }
 }
