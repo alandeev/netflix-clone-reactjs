@@ -1,0 +1,18 @@
+.header {
+    position: absolute;
+    width: 100%;
+}
+
+.header div {
+    display: inline-block;
+    margin: 8px;
+}   
+
+.header--user { float: right; }
+
+.header--logo img { width: 110px; }
+
+.header--user img { 
+    width: 60px;
+    float: right; 
+}

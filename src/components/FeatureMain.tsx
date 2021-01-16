@@ -2,6 +2,7 @@ import React from 'react'; //disable-eslint-line
 import { IMovieExtense } from '../interfaces/movie';
 
 import './FeatureMain.css';
+import { Header } from './Header';
 
 interface FeatureMainDTO {
   movie: IMovieExtense
@@ -15,12 +16,13 @@ export function FeatureMain({ movie }: FeatureMainDTO){
       backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})`
     }}>
       <div className="vertical-grandient">
+        <Header />
         <div className="horizontal-grandient">
           <div className="movie">
             <h1 className="movie-title">{ movie.title }</h1>
             <div className="movie-details">
-              <p className="points">8.5</p>
-              <p className="create-date">2016</p>
+              <p className="points">{movie.vote_average}</p>
+              <p className="create-date">{movie.release_date}</p>
               <p className="count-temp">4 temporadas</p>
             </div>
             <div className="movie-description">

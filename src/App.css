@@ -4,5 +4,6 @@ body {
 }
 
 .categories {
+  margin-top: -130px;
   padding-left: 30px;
 }
